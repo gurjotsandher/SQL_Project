@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Returned Data</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <style>
+      th {
+        text-align: left;
+        padding: 5px 10px;
+        background-color: rgb(165, 165, 165);
+      }
+      td {
+        padding: 5px 10px;
+        background-color: rgb(231, 231, 231);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Returned Data</h1>
+    <table>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>Postal Code</th>
+        <th>Street Name</th>
+        <th>Number</th>
+        <th>Province</th>
+      </tr>
+      <% for(var i=0; i < user_data.length; i++) { %>
+      <tr>
+        <td><%= user_data[i].id %></td>
+        <td><%= user_data[i].name %></td>
+        <td><%= user_data[i].last_name %></td>
+        <td><%= user_data[i].email %></td>
+        <td><%= user_data[i].postal_code %></td>
+        <td><%= user_data[i].street_name %></td>
+        <td><%= user_data[i].number %></td>
+        <td><%= user_data[i].province %></td>
+      </tr>
+      <% } %>
+    </table>
+  </body>
+</html>
